@@ -1,0 +1,263 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>Array Pipe</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>diff</b></h5>
+    <p>Returns array of diff between arrays</p>
+    <b>Usage</b>: array | diff: [ARRAY]: [ARRAY]: ... : [ARRAY]
+    <p><code ngNonBindable>this.items = [1, 2, 3, 4] </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | diff: [1, 2]"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3, 4] | diff: [1, 2]">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>flatten</b></h5>
+    <p>Flattens nested array, passing shallow will mean it will only be flattened a single level</p>
+    <b>Usage</b>: array | flatten: [shallow|optional]
+    <p><code ngNonBindable>this.items = [1,2,3,[4,5,6,[7,8,9],[10,11,12,13,[14],[15],[16, [17]]]]]; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | flatten"&gt; </code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1,2,3,[4,5,6,[7,8,9],[10,11,12,13,[14],[15],[16, [17]]]]] | flatten">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>initial</b></h5>
+    <p>Slicing off the end of the array by n elements</p>
+    <b>Usage</b>: array | initial: n
+    <p><code ngNonBindable>this.items = this.items = ['first', 'second', 'third']; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | initial: 1"&gt; </code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of ['first', 'second', 'third'] | initial: 1">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>tail</b></h5>
+    <p>Slicing off the start of the array by n elements</p>
+    <b>Usage</b>: array | tail: n
+    <p><code ngNonBindable>this.items = this.items = ['first', 'second', 'third']; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | tail: 1"&gt; </code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of ['first', 'second', 'third'] | tail: 1">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>intersection</b></h5>
+    <p>Returns the intersections of an arrays</p>
+    <b>Usage</b>: array | intersection: [ARRAY]: [ARRAY]: ... : [ARRAY]
+    <p><code ngNonBindable>this.items = [1, 2, 3, 4, 5]; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | intersection: [1, 2, 3]: [3, 6]"&gt; </code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3, 4, 5] | intersection: [1, 2, 3]: [3, 6]">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>reverse</b></h5>
+    <p>Reverses an array</p>
+    <b>Usage</b>: array | reverse
+    <p><code ngNonBindable>this.items = [1, 2, 3]; </code></p>
+    <p><code ngNonBindable>&lt;li *ngFor="let item of items | reverse"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3] | reverse">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>truthify</b></h5>
+    <p>Removes un-truthy values from array</p>
+    <b>Usage</b>: array | truthify
+    <p><code ngNonBindable>this.items = [null, 1, false, undefined, 2, 0, 3, NaN, 4, '']; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | truthify"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [null, 1, false, undefined, 2, 0, 3, NaN, 4, ''] | truthify">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>unique</b></h5>
+    <p>Removes duplicates from array</p>
+    <b>Usage</b>: array | unique
+    <p><code ngNonBindable>this.items = [1, 2, 3, 1, 2, 3]; </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | unique"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3, 1, 2, 3] | unique">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>without</b></h5>
+    <p>Returns array without specific elements</p>
+    <b>Usage</b>: array | without: [ARRAY]
+    <p><code ngNonBindable>this.items = [1, 2, 3, 1, 2, 3];</code></p>
+    <p><code ngNonBindable>&lt;li *ngFor="let item of items | without: [1,3]"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3, 1, 2, 3] | without: [1,3]">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>pluck</b></h5>
+    <p>Returns array of properties values</p>
+    <b>Usage</b>: array | pluck: propertyName
+    <p><code ngNonBindable>this.items refer to source coede.
+ </code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | pluck: 'a'"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of pluckItems | pluck: 'a'">
+      <p>Item: {{item}}</p>
+    </div>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | pluck: 'b.c'"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of pluckItems | pluck: 'b.c'">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>shuffle</b></h5>
+    <p>Returns randomly shuffled array</p>
+    <b>Usage</b>: array | shuffle
+    <p><code ngNonBindable>this.items = [1, 2, 3, 4, 5, 6];</code></p>
+    <p><code ngNonBindable>&lt;div *ngFor="let item of items | shuffle"&gt;</code></p>
+    <b>Output</b>:
+    <div *ngFor="let item of [1, 2, 3, 4, 5, 6] | shuffle">
+      <p>Item: {{item}}</p>
+    </div>
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>every</b></h5>
+    <p>Returns true if every elements of the array fits the predicate otherwise false</p>
+    <b>Usage</b>: array | every: predicate
+    <p><code ngNonBindable>this.itemsOne  = [1, 1, 1];</code></p>
+    <p><code ngNonBindable>this.itemsTwo  = [1, 1, 2];</code></p>
+    <p><code ngNonBindable>this.itemsThree  = [2, 2, 2];</code></p>
+
+    <p><code ngNonBindable>{{ itemsOne | every: predicate }}</code></p>
+    <b>Output</b>: {{ itemsOne | every: predicate }}
+    <p><code ngNonBindable>{{ itemsTwo | every: predicate }}</code></p>
+    <b>Output</b>: {{ itemsTwo | every: predicate }}
+    <p><code ngNonBindable>{{ itemsThree | every: predicate }}</code></p>
+    <b>itemsThree</b>: {{ itemsThree | every: predicate }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>some</b></h5>
+    <p>Returns true if some elements of the array fits the predicate otherwise false</p>
+    <b>Usage</b>: array | some: predicate
+    <p><code ngNonBindable>this.itemsOne  = [1, 1, 1];</code></p>
+    <p><code ngNonBindable>this.itemsTwo  = [1, 1, 2];</code></p>
+    <p><code ngNonBindable>this.itemsThree  = [2, 2, 2];</code></p>
+
+    <p><code ngNonBindable>{{ itemsOne | some: predicate }}</code></p>
+    <b>Output</b>: {{ itemsOne | some: predicate }}
+    <p><code ngNonBindable>{{ itemsTwo | some: predicate }}</code></p>
+    <b>Output</b>: {{ itemsTwo | some: predicate }}
+    <p><code ngNonBindable>{{ itemsThree | some: predicate }}</code></p>
+    <b>itemsThree</b>: {{ itemsThree | some: predicate }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>sample</b></h5>
+    <p>Returns sample items randomly from array</p>
+    <b>Usage</b>: array | sample: [amount | default = 1]
+    <p><code ngNonBindable>{{ [1, 2, 3, 4] | sample }}</code></p>
+    <b>Output</b>: {{ [1, 2, 3, 4] | sample }}
+    <p><code ngNonBindable>{{ [1, 2, 3, 4] | sample: 2 }}</code></p>
+    <b>Output</b>: {{ [1, 2, 3, 4] | sample:2 }}
+
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>groupBy</b></h5>
+    <p>Returns object of grouped by items by discriminator, and supports nested properties.</p>
+    <b>Usage</b>: array | groupBy: [string[] | string | Function]: [delimiter: string | optional, default = '|']
+    <p><code ngNonBindable>{{ arrayObject | groupBy: 'elm' }}</code></p>
+    <b>Output</b>: {{ arrayObject | groupBy: 'elm' }}
+    <!--<div *ngFor="let item of #tempArray ">
+      <p>Item: {{item.id}},Item.elm: {{item.elm}},Item.value: {{item.value}}</p>
+    </div>-->
+    <p><code ngNonBindable>{{ arrayObject | groupBy: ['elm', 'value'] }}</code></p>
+    <b>Output</b>: {{ arrayObject | groupBy: ['elm', 'value'] }}
+    <!--<div *ngFor="let item of arrayObject | groupBy: 'elm' ">
+      <p>Item: {{item.id}},Item: {{item.elm}},Item: {{item.value}}</p>
+    </div>-->
+    <p><code ngNonBindable>{{ arrayObject | groupBy: ['elm', 'value']: '_' }}</code></p>
+    <b>Output</b>: {{ arrayObject | groupBy: ['elm', 'value']: '_' }}
+    <p><code ngNonBindable>{{ arrayNestedObject | groupBy: 'prop.deep' }}</code></p>
+    <b>Output</b>: {{ arrayNestedObject | groupBy: 'prop.deep' }}
+    <hr/>
+  </div>
+
+<div class="col l12">
+    <h5><b>filterBy</b></h5>
+    <p>Returns object array of grouped by items by discriminator</p>
+    <b>Usage</b>: array | filterBy: [prop, nested.prop, ...]: search: [strict | optional]
+    <p><code ngNonBindable>{{ users | filterBy: ['id']: 1 }}</code></p>
+    <b>Output</b>: {{ users | filterBy: ['id']: 1 }}
+    
+    <p><code ngNonBindable>{{ users | filterBy: ['work.company']: 'Bar Tech' }}</code></p>
+    <b>Output</b>: {{ users | filterBy: ['work.company']: 'Bar Tech' }}
+
+    <p><code ngNonBindable>{{ users | filterBy: ['first_name', 'last_name']: 'John' }}</code></p>
+    <b>Output</b>: {{ users | filterBy: ['first_name', 'last_name']: 'John' }}
+    
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>orderBy</b></h5>
+    <p>Returns ordered array by configuration.</p>
+    <b>Usage</b>: array | orderBy: [prop, nested.prop, array of props, ...]
+    <p><code ngNonBindable>{{ numbers | orderBy }}</code></p>
+    <b>Output</b>: {{ numbers | orderBy }}
+    <p><code ngNonBindable>{{ numbers | orderBy: '-' }}</code></p>
+    <b>Output</b>: {{ numbers | orderBy: '-' }}
+
+    <p><code ngNonBindable>{{ deepObj | orderBy: 'amount' }}</code></p>
+    <b>Output</b>: {{ deepObj | orderBy: 'amount' }}
+    <p><code ngNonBindable> {{ deepObj | orderBy: '-amount' }}</code></p>
+    <b>Output</b>: {{ deepObj | orderBy: '-amount' }}
+
+    <p><code ngNonBindable>{{ deepObj | orderBy: 'deep.prop' }}</code></p>
+    <b>Output</b>: {{ deepObj | orderBy: 'deep.prop' }}
+    <p><code ngNonBindable> {{ deepObj | orderBy: '-deep.prop' }}</code></p>
+    <b>Output</b>: {{ deepObj | orderBy: '-deep.prop' }}
+
+    <p><code ngNonBindable> {{ obj | orderBy: ['amount', 'id'] }}</code></p>
+    <b>Output</b>: {{ obj | orderBy: ['amount', 'id'] }}
+    <!--<p><code ngNonBindable>{{ [1, 2, 3, 4] | sample: 2 }}</code></p>
+    <b>Output</b>: {{ [1, 2, 3, 4] | sample:2 }}-->
+    <hr/>
+  </div>
+
+</div>

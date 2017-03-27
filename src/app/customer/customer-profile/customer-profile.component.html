@@ -1,0 +1,15 @@
+<p>
+  customer-profile works!
+</p>
+
+{{userName}}
+
+Customer ID is {{id}}
+
+
+<div *ngFor="let customer of customers" >
+                        <h5>{{customer.content}}</h5>
+                        <p>{{customer.username}} {{customer.date}}</p>        		
+                	</div>
+
+<router-outlet></router-outlet>

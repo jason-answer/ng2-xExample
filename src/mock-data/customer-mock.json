@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "customerName": "customer1",
+            "content": "This is customer's content.",
+            "date": "2016-09-09 12:00:09",
+            "username": "user1"
+        },
+        {
+            "id": 2,
+            "customerName": "customer2",
+            "content": "This is customer's content.",
+            "date": "2016-09-09 12:00:09",
+            "username": "user2"
+        },
+        {
+            "id": 3,
+            "customerName": "customer3",
+            "content": "This is customer's content.",
+            "date": "2016-09-09 12:00:09",
+            "username": "user3"
+        }
+    ]
+}

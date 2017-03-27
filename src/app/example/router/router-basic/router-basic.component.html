@@ -1,0 +1,18 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>Router Basic</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>Root Router</b></h5>
+    <p>In Project, app.routes.ts is application's root router.</p>
+
+    <h5><b>Lazy loading modules with the Router</b></h5>
+    <p>Use lazy loading moudule configure to router.</p>
+    <p><code ngNonBindable>{{'{ path: 'examples', loadChildren: './example/example.module#ExampleModule' }}''}</code></p>
+    <b>Configuration @NgModule</b>: In the <span class="flow-text bold">ExampleModule</span>, imports <span class="flow-text bold">ExampleRoutingModule</span> to ExampleModule of @NgModule. The ExampleRoutingModule is routes for child component.
+    All child component should be add <span class="flow-text bold">[declarations]</span> to parent module, NOT to be add App.module
+    <hr/>
+  </div>
+</div>

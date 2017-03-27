@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col m3">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">supervisor_account</i>Customer Module</div>
+                <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+                    <div class="collection">
+                        <a routerLink="/customers/1" class="collection-item">Customer Profile</a>
+                        <a routerLink="/customers/1/edit" class="collection-item">Customer Profile Edit</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">library_books</i>Inquriy</div>
+                <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+                    <div class="collection">
+                        <a routerLink="/customers/1/inquriys" class="collection-item">Inquriy List</a>
+                        <a routerLink="/customers/1/inquriys/2" class="collection-item">Inquriy View</a>
+                        <a routerLink="/customers/1/inquriys/2/edit" class="collection-item">Inquriy Edit</a>
+                        <a [routerLink]="['/customers/1/inquriys/99/edit', { id:'99', foo: 'foo' }]" class="collection-item">Inquriy Optional Param</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">contacts</i>Contracts</div>
+                <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+                    <div class="collection">
+                        <a routerLink="/customers/1/contracts" class="collection-item">Contracts List</a>
+                        <a routerLink="/customers/1/contracts/1" class="collection-item">Contract View</a>
+                        <a routerLink="/customers/1/contracts/1/edit" class="collection-item">Contract Edit</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">payment</i>Offer</div>
+                <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+                    <div class="collection">
+                        <a routerLink="/customers/1/offers" class="collection-item">Offer List</a>
+                        <a routerLink="/customers/1/offers/1" class="collection-item">Offer View</a>
+                        <a routerLink="/customers/1/offers/1/edit" class="collection-item">Offer Edit</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col m9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col l12">
+    <h4>Service</h4>
+    <blockquote>
+      If you want to debug with backend, Please clone and run example from github.<br>
+      <a href="https://github.com/jason-answer/SwaggerWcf"> WCF Demo</a>
+    </blockquote>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>Call Service With Promise</b></h5>
+    <p>When call service, get a promise data</p>
+    <b>Usage </b>: <button class="btn waves-effect waves-light" name="action" (click)="getPromiseDataBasic()">Call Service with Promise
+    <i class="material-icons left">directions_run</i>
+  </button>
+    <p> <b>Result</b>: {{promiseData | json}}</p>
+    <hr/>
+  </div>
+
+   <div class="col l12">
+    <h5><b>Multiple Call Service With Promise Sequence</b></h5>
+    <p>When call service, get promise data  by sequence</p>
+    <b>Usage </b>: <button class="btn waves-effect waves-light" name="action" (click)="getPromiseDataBySequence()">Multiple Service By Sequence
+    <i class="material-icons left">directions_run</i>
+  </button>
+    <p> <b>Result</b>: {{promiseSequenceData | json}}</p>
+    <hr/>
+  </div>
+</div>

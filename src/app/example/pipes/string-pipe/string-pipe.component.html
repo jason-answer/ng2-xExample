@@ -1,0 +1,167 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>String Pipe</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>repeat</b></h5>
+    <p>Repeats a string n times</p>
+    <b>Usage</b>: string | repeat: times: [separator|optional]
+    <p><code ngNonBindable>{{ 'example' | repeat: 3: '@' }} </code></p> <b>Output</b>: "{{ 'example' | repeat: 3: '@' }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>scan</b></h5>
+    <p>Scans string and replace {{ '{ i }' }} placeholders by equivalent member of the array</p>
+    <b>Usage</b>: string | scan: [ARRAY]
+    <code ngNonBindable></code>
+    <p><code ngNonBindable>{{'Hey {0}, {1}' | scan: ['foo', 'bar']}} </code></p> <b>Output</b>: "{{'Hey {0}, {1}' | scan: ['foo',
+    'bar']}}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>shorten</b></h5>
+    <p>Shortening a string by length and providing a custom string to denote an omission</p>
+    <b>Usage</b>: string | string | shorten: length: [suffix|optional]: [wordBreak boolean|optional]
+    <p><code ngNonBindable>{{'Hey foo bar' | shorten: 3: '...'}} </code></p> <b>Output</b>: "{{'Hey foo bar' | shorten: 3: '...'}}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>stripTags</b></h5>
+    <p>Strips a HTML tags from string and providing which tags should not be removed</p>
+    <b>Usage</b>: string | stripTags: [ARRAY]
+    <p><code ngNonBindable><pre>{{'&lt;a href=""&gt;foo&lt;/a&gt; &lt;p class="foo"&gt;bar&lt;/p&gt;' | stripTags }} </pre></code></p>
+    <b>Output</b>: "{{'<a href="">foo</a>
+    <p class="foo">bar</p>' | stripTags }}"
+    <p><code ngNonBindable>{{'&lt;a href=""&gt;foo&lt;/a&gt; &lt;p class="foo"&gt;bar&lt;/p&gt;' | stripTags: 'p'}} </code></p>
+    <b>Output</b>: {{'<a href=''>foo</a>
+    <p class='foo'>bar</p>' | stripTags: 'p'}}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>ucfirst</b></h5>
+    <p>Uppercase first letter of first word</p>
+
+    <p><code ngNonBindable>{{'foo bar' | ucfirst }} </code></p> <b>Output</b>: "{{'foo bar' | ucfirst }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>ucwords</b></h5>
+    <p>Uppercase first letter every word</p>
+    <b>Usage</b>: string | string | shorten: length: [suffix|optional]: [wordBreak boolean|optional]
+    <p><code ngNonBindable>{{'foo bar' | ucwords }} </code></p> <b>Output</b>: "{{'foo bar' | ucwords }}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>trim</b></h5>
+    <p>Strips characters from the beginning and end of a string (default character is space).</p>
+    <b>Usage</b>: string | trim: [characters|optional]
+    <p><code ngNonBindable>{{'  foo  ' | trim }} </code></p> <b>Output</b>: "{{' foo ' | trim }}"
+    <p><code ngNonBindable>{{'foobarfoo' | trim: 'foo' }} </code></p> <b>Output</b>: "{{'foobarfoo' | trim: 'foo' }}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>ltrim</b></h5>
+    <p>Strips characters from the beginning of a string (default character is space).</p>
+    <b>Usage</b>: string | ltrim: [characters|optional]
+    <p><code ngNonBindable>{{'  foo  ' | ltrim }} </code></p> <b>Output</b>: "{{' foo ' | ltrim }}"
+    <p><code ngNonBindable>{{'foobarfoo' | ltrim: 'foo' }} </code></p> <b>Output</b>: "{{'foobarfoo' | ltrim: 'foo' }}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>rtrim</b></h5>
+    <p>Strips characters from the end of a string (default character is space).</p>
+    <b>Usage</b>: string | rtrim: [characters|optional]
+    <p><code ngNonBindable>{{'  foo  ' | rtrim }} </code></p> <b>Output</b>: "{{' foo ' | rtrim }}"
+    <p><code ngNonBindable>{{'foobarfoo' | rtrim: 'foo' }} </code></p> <b>Output</b>: "{{'foobarfoo' | rtrim: 'foo' }}"
+    <hr/>
+  </div>
+   <div class="col l12">
+    <h5><b>reverse</b></h5>
+    <p>Reverses a string</p>
+    <b>Usage</b>: string | reverse
+    <p><code ngNonBindable>{{'foo bar' | reverse }} </code></p> <b>Output</b>: "{{'foo bar' | reverse }}"
+    <hr/>
+  </div>
+   <div class="col l12">
+    <h5><b>slugify</b></h5>
+    <p>Slugify a string (lower case and add dash between words).</p>
+    <b>Usage</b>: string | slugify
+    <p><code ngNonBindable>{{'Foo Bar' | slugify }} </code></p> <b>Output</b>: "{{'Foo Bar' | slugify }}"
+    <p><code ngNonBindable>{{'Some Text To Slugify' | slugify }} </code></p> <b>Output</b>: "{{'Some Text To Slugify' | slugify }}"
+    <hr/>
+  </div>
+   <div class="col l12">
+    <h5><b>camelize</b></h5>
+    <p>Camelize a string replaces dashes and underscores and converts to camelCase string.</p>
+    <b>Usage</b>: string | camelize
+    <p><code ngNonBindable>{{'foo_bar' | camelize }} </code></p> <b>Output</b>: "{{'foo_bar' | camelize }}"
+    <p><code ngNonBindable>{{'some_dashed-with-underscore' | camelize }} </code></p> <b>Output</b>: "{{'some_dashed-with-underscore' | camelize }}"
+    <p><code ngNonBindable>{{'-dash_first-' | camelize }} </code></p> <b>Output</b>: "{{'-dash_first-' | camelize }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>latinise</b></h5>
+    <p>Removes accents from Latin characters.</p>
+    <b>Usage</b>: string | latinise
+    <p><code ngNonBindable>{{'Féé' | latinise }} </code></p> <b>Output</b>: "{{'Féé' | latinise }}"
+    <p><code ngNonBindable>{{'foo' | latinise }} </code></p> <b>Output</b>: "{{'foo' | latinise }}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>lines</b></h5>
+    <p>Converts a string with new lines into an array of each line.</p>
+    <b>Usage</b>: string | latinise
+    <p><code ngNonBindable>{{'Some\nSentence with\r\nNew line' | lines }} </code></p> <b>Output</b>: "{{'Some\nSentence with\r\nNew line' | lines }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>underscore</b></h5>
+    <p>Converts camelCase string to underscore.</p>
+    <b>Usage</b>: string | underscore
+    <p><code ngNonBindable>{{'angularIsAwesome' | underscore }} </code></p> <b>Output</b>: "{{'angularIsAwesome' | underscore }}"
+    <p><code ngNonBindable>{{'FooBar' | underscore }} </code></p> <b>Output</b>: "{{'FooBar' | underscore }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>test</b></h5>
+    <p>Tests if a string matches a pattern.</p>
+    <b>Usage</b>: string | test: {{'{RegExp}'}}: {{'{Flags}'}}
+    <p><code ngNonBindable>{{'foo 42' | test: '[\\d]+$': 'g' }} </code></p> <b>Output</b>: "{{'foo 42' | test: '[\\d]+$': 'g' }}"
+    <p><code ngNonBindable>{{'42 foo' | test: '[\\d]+$': 'g' } </code></p> <b>Output</b>: "{{'42 foo' | test: '[\\d]+$': 'g' }"
+    <p><code ngNonBindable>{{'FOO' | test: '^foo': 'i' }} </code></p> <b>Output</b>: "{{'FOO' | test: '^foo': 'i' }}"
+    <hr/>
+  </div>
+
+   <div class="col l12">
+    <h5><b>match</b></h5>
+    <p>Returns array of matched elements in string.</p>
+    <b>Usage</b>: string | match: {{'{RegExp}'}}: {{'{Flags}'}}
+    <p><code ngNonBindable>{{'foo 42' | match: '[\\d]+$': 'g' }} </code></p> <b>Output</b>: "{{'foo 42' | match: '[\\d]+$': 'g' }}"
+    <p><code ngNonBindable>{{'42 foo' | match: '[\\d]+$': 'g' }} </code></p> <b>Output</b>: "{{'42 foo' | match: '[\\d]+$': 'g' }}"
+    <p><code ngNonBindable>{{'FOO' | match: '^foo': 'i' }} </code></p> <b>Output</b>: "{{'FOO' | match: '^foo': 'i' }}"
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>lpad</b></h5>
+    <p>Left pad a string to a given length using a given pad character (default is a space)</p>
+    <b>Usage</b>: string | lpad: length: [padCharacter:string|optional]
+    <p><code ngNonBindable>{{'foo' | lpad: 5}} </code></p> <b>Output</b>: "{{'foo' | lpad: 5}}"
+    <p><code ngNonBindable>{{ '3' | lpad: 5: '0'}} </code></p> <b>Output</b>: "{{'3' | lpad: 5: '0'}}"
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>rpad</b></h5>
+    <p>Right pad a string to a given length using a given pad character (default is a space)</p>
+    <b>Usage</b>: string | rpad: length: [padCharacter:string|optional]
+    <p><code ngNonBindable>{{'Foo' | rpad: 5: '#'}} </code></p> <b>Output</b>: "{{'Foo' | rpad: 5: '#'}}"
+    <hr/>
+  </div>
+</div>

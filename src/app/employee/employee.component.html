@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col m3">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">supervisor_account</i>Employee Module</div>
+                <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+                    <div class="collection">
+                        <li><a routerLink="/employees/1" class="collection-item">Employee Profile</a></li>
+                        <li><a routerLink="/employees/1/edit" class="collection-item">Employee Profile Edit</a></li>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="col m9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

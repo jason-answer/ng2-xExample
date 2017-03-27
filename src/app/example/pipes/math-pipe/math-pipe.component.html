@@ -1,0 +1,104 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>Math Pipe</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>min</b></h5>
+    <p>Returns the minimum of a given array</p>
+    <b>Usage</b>: array | min
+    <p><code ngNonBindable>{{ [1, 2, 3, 1, 2, 3] | min }} </code></p>
+    <b>Output</b>: {{ [1, 2, 3, 1, 2, 3] | min }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>max</b></h5>
+    <p>Returns the maximum of a given array</p>
+    <b>Usage</b>: array | max
+    <p><code ngNonBindable>{{ [1, 2, 3, 1, 2, 3] | max }} </code></p>
+    <b>Output</b>: {{ [1, 2, 3, 1, 2, 3] | max }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>sum</b></h5>
+    <p>Returns the sum of a given array</p>
+    <b>Usage</b>: array | sum
+    <p><code ngNonBindable>{{ [1, 2, 3, 4] | sum }} </code></p>
+    <b>Output</b>: {{ [1, 2, 3, 4] | sum }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>percentage</b></h5>
+    <p>Returns percentage between numbers</p>
+    <b>Usage</b>: number | percentage: [total | default = 100]: [floor | default = false]
+    <p><code ngNonBindable>{{ 5 | percentage }} </code></p>
+    <b>Output</b>: {{ 5 | percentage }}
+
+    <p><code ngNonBindable>{{ 10 | percentage: 160 }} </code></p>
+    <b>Output</b>: {{ 10 | percentage: 160 }}
+    <p><code ngNonBindable>{{ 5 | percentage: 160: true }} </code></p>
+    <b>Output</b>: {{ 10 | percentage: 160: true }}
+    <hr/>
+  </div>
+
+
+  <div class="col l12">
+    <h5><b>ceil</b></h5>
+    <p>Returns ceil of a number by precision</p>
+    <b>Usage</b>: number | ceil: [precision | default = 0]
+    <p><code ngNonBindable>{{ 42.123 | ceil }} </code></p>
+    <b>Output</b>: {{ 42.123 | ceil }}
+
+    <p><code ngNonBindable>{{ 42.123 | ceil: 2 }} </code></p>
+    <b>Output</b>: {{ 42.123 | ceil: 2 }}
+
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>floor</b></h5>
+    <p>Returns floor of a number by precision</p>
+    <b>Usage</b>: number | floor: [precision | default = 0]
+    <p><code ngNonBindable>{{ 42.123 | floor }} </code></p>
+    <b>Output</b>: {{ 42.123 | floor }}
+
+    <p><code ngNonBindable>{{ 42.123 | floor: 2 }} </code></p>
+    <b>Output</b>: {{ 42.123 | floor: 2 }}
+
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>round</b></h5>
+    <p>Returns round of a number by precision</p>
+    <b>Usage</b>: number | round: [precision | default = 0]
+    <p><code ngNonBindable>{{ 42.4 | round }} </code></p>
+    <b>Output</b>: {{ 42.4 | round }}
+
+    <p><code ngNonBindable>{{ 42.5 | round }} </code></p>
+    <b>Output</b>: {{ 42.5 | round }}
+
+    <p><code ngNonBindable>{{ 42.5 | round: 2 }} </code></p>
+    <b>Output</b>: {{ 42.123 | round: 2 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>bytes</b></h5>
+    <p>Returns bytes with a unit symbol</p>
+    <b>Usage</b>: number | bytes
+    <p><code ngNonBindable>{{ 10 | bytes }} </code></p>
+    <b>Output</b>: {{ 10 | bytes }}
+    <p><code ngNonBindable>{{ 1000 | bytes }} </code></p>
+    <b>Output</b>: {{ 1000000 | bytes }}
+    <p><code ngNonBindable>{{ 10 | bytes }} </code></p>
+    <b>Output</b>: {{ 1000000000 | bytes }}
+    <p><code ngNonBindable>{{ 56029330 | bytes }} </code></p>
+    <b>Output</b>: {{ 56029330 | bytes }}
+    <p><code ngNonBindable>{{ 76029330 | bytes }} </code></p>
+    <b>Output</b>: {{ 76029330 | bytes }}
+    <hr/>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<app-title [subtitle]="subtitle"></app-title>
+<!-- Login component Start -->
+<app-user-login></app-user-login>
+<!-- Login component Eend -->
+<nav>
+  <div class="nav-wrapper">
+    <div class="row">
+      <div class="col s1"><a href="" class="brand-logo">Logo</a></div>
+      <div class="col s11">
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li><a routerLink="customers" routerLinkActive="active">Customer</a></li>
+          <li><a routerLink="employees" routerLinkActive="active">Employee</a></li>
+           <li><a routerLink="examples" routerLinkActive="active">Examples</a></li>
+          <li class="right" *ngIf="currentUser?.username">
+            <a href="javascript:void(0);"(click)="onLogout()">Log Out</a>
+          </li>
+          <li class="right" *ngIf="currentUser?.username">Welcome, {{currentUser?.username}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

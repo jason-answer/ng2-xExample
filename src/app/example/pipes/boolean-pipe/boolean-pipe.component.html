@@ -1,0 +1,190 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>Boolean Pipe</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isNull</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isNull
+    <p><code ngNonBindable>{{ null | isNull }}</code></p>
+    <b>Output</b>: {{ null | isNull }}
+    <p><code ngNonBindable>{{ 1 | isNull }}</code></p>
+    <b>Output</b>: {{ 1 | isNull }}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isDefined</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isDefined
+    <p><code ngNonBindable>{{ 1 | isDefined }}</code></p>
+    <b>Output</b>: {{ 1 | isDefined }}
+    <p><code ngNonBindable>{{ undefined | isDefined }}</code></p>
+    <b>Output</b>: {{ undefined | isDefined }}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isUndefined</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isUndefined
+    <p><code ngNonBindable>{{ 1 | isUndefined }}</code></p>
+    <b>Output</b>: {{ 1 | isUndefined }}
+    <p><code ngNonBindable>{{ undefined | isUndefined }}</code></p>
+    <b>Output</b>: {{ undefined | isUndefined }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isString</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isString
+    <p><code ngNonBindable>{{ 1 | isString }}</code></p>
+    <b>Output</b>: {{ 1 | isString }}
+    <p><code ngNonBindable>{{ ' ' | isString }}</code></p>
+    <b>Output</b>: {{ '' | isString }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isNumber</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isNumber
+    <p><code ngNonBindable>{{ 1 | isNumber }}</code></p>
+    <b>Output</b>: {{ 1 | isNumber }}
+    <p><code ngNonBindable>{{ ' ' | isNumber }}</code></p>
+    <b>Output</b>: {{ '' | isNumber }}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isArray</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isArray
+    <p><code ngNonBindable>{{ [1, 2] | isArray }}</code></p>
+    <b>Output</b>: {{ [1, 2]| isNumber }}
+    <p><code ngNonBindable>{{ 1 | isArray }}</code></p>
+    <b>Output</b>: {{ 1 | isNumber }}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isObject</b></h5>
+    <p></p>
+    <b>Usage</b>: any | isObject
+    <p><code ngNonBindable>{{{a: 1, b: 2}| isObject }}</code></p>
+    <b>Output</b>: {{ {a: 1, b: 2}| isObject }}
+    <p><code ngNonBindable>{{ 1 | isObject }}</code></p>
+    <b>Output</b>: {{ 1 | isObject }}
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>isGreaterThan</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isGreaterThan
+    <p><code ngNonBindable>{{ 1 | isGreaterThan: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isGreaterThan: 1 }}
+    <p><code ngNonBindable>{{ 1 | isGreaterThan: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isGreaterThan: 2 }}
+    <p><code ngNonBindable>{{ 2 | isGreaterThan: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isGreaterThan: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isGreaterEqualThan</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isGreaterEqualThan
+    <p><code ngNonBindable>{{ 1 | isGreaterEqualThan: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isGreaterEqualThan: 1 }}
+    <p><code ngNonBindable>{{ 1 | isGreaterEqualThan: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isGreaterEqualThan: 2 }}
+    <p><code ngNonBindable>{{ 2 | isGreaterEqualThan: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isGreaterEqualThan: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isLessThan</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isLessThan
+    <p><code ngNonBindable>{{ 1 | isLessThan: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isLessThan: 1 }}
+    <p><code ngNonBindable>{{ 1 | isLessThan: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isLessThan: 2 }}
+    <p><code ngNonBindable>{{ 2 | isLessThan: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isLessThan: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isLessEqualThan</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isLessEqualThan
+    <p><code ngNonBindable>{{ 1 | isLessEqualThan: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isLessEqualThan: 1 }}
+    <p><code ngNonBindable>{{ 1 | isLessEqualThan: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isLessEqualThan: 2 }}
+    <p><code ngNonBindable>{{ 2 | isLessEqualThan: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isLessEqualThan: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isEqualTo</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isEqualTo
+    <p><code ngNonBindable>{{ 1 | isEqualTo: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isEqualTo: 1 }}
+    <p><code ngNonBindable>{{ 1 | isNotEqualTo: '1' }}</code></p>
+    <b>Output</b>: {{ 1 | isNotEqualTo: '1' }}
+    <p><code ngNonBindable>{{ 1 | isEqualTo: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isEqualTo: 2 }}
+    <p><code ngNonBindable>{{ 2 | isEqualTo: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isEqualTo: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isNotEqualTo</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isNotEqualTo
+    <p><code ngNonBindable>{{ 1 | isNotEqualTo: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isNotEqualTo: 1 }}
+    <p><code ngNonBindable>{{ 1 | isNotEqualTo: '1' }}</code></p>
+    <b>Output</b>: {{ 1 | isNotEqualTo: '1' }}
+    <p><code ngNonBindable>{{ 1 | isNotEqualTo: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isNotEqualTo: 2 }}
+    <p><code ngNonBindable>{{ 2 | isNotEqualTo: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isNotEqualTo: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isIdenticalTo</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isIdenticalTo
+    <p><code ngNonBindable>{{ 1 | isIdenticalTo: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isIdenticalTo: 1 }}
+    <p><code ngNonBindable>{{ 1 | isIdenticalTo: '1' }}</code></p>
+    <b>Output</b>: {{ 1 | isIdenticalTo: '1' }}
+    <p><code ngNonBindable>{{ 1 | isIdenticalTo: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isIdenticalTo: 2 }}
+    <p><code ngNonBindable>{{ 2 | isIdenticalTo: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isIdenticalTo: 1 }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>isNotIdenticalTo</b></h5>
+    <p></p>
+    <b>Usage</b>: number | isNotIdenticalTo
+    <p><code ngNonBindable>{{ 1 | isNotIdenticalTo: 1 }}</code></p>
+    <b>Output</b>: {{ 1 | isNotIdenticalTo: 1 }}
+    <p><code ngNonBindable>{{ 1 | isNotIdenticalTo: '1' }}</code></p>
+    <b>Output</b>: {{ 1 | isNotIdenticalTo: '1' }}
+    <p><code ngNonBindable>{{ 1 | isNotIdenticalTo: 2 }}</code></p>
+    <b>Output</b>: {{ 1 | isNotIdenticalTo: 2 }}
+    <p><code ngNonBindable>{{ 2 | isNotIdenticalTo: 1 }}</code></p>
+    <b>Output</b>: {{ 2 | isNotIdenticalTo: 1 }}
+    <hr/>
+  </div>
+</div>

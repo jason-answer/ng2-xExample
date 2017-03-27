@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col m3">
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">input</i>Pipes</div>
+        <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+          <div class="collection">
+            <a routerLink="/examples/pipes/string" class="collection-item">String Pipe</a>
+            <a routerLink="/examples/pipes/array" class="collection-item">Array Pipe</a>
+            <a routerLink="/examples/pipes/object" class="collection-item">Object Pipe</a>
+            <a routerLink="/examples/pipes/math" class="collection-item">Math Pipe</a>
+            <a routerLink="/examples/pipes/boolean" class="collection-item">Boolean Pipe</a>
+            <a routerLink="/examples/pipes/async" class="collection-item">Async Pipe</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header"><i class="material-icons">navigation</i>Router</div>
+        <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+          <div class="collection">
+
+            <a routerLink="/examples/router/basic" class="collection-item">Router Basic</a>
+            <a routerLink="/examples/router/param/5" class="collection-item">Router Parameter</a>
+            <a [routerLink]="['/examples/router/param', { param:'99', foo: 'foo' }]" class="collection-item">Router Optional Parameter</a>
+            <a routerLink="/examples/router/guard" class="collection-item">Router Guard</a>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="collapsible-header"><i class="material-icons">web</i>Jquery</div>
+        <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+          <div class="collection">
+
+            <a routerLink="/examples/jquery/basic" class="collection-item">Jquery Basic</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">room_service</i>Service</div>
+        <div class="collapsible-body" style="padding-top: 5px;padding-bottom: 5px;">
+          <div class="collection">
+
+            <a routerLink="/examples/service/basic" class="collection-item">Service Basic</a>
+             <a routerLink="/examples/service/promise" class="collection-item">Service Promise</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col m9">
+    <router-outlet></router-outlet>
+  </div>
+</div>

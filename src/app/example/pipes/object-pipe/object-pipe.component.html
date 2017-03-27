@@ -1,0 +1,81 @@
+<div class="row">
+
+  <div class="col l12">
+    <h4>Object Pipe</h4>
+    <hr/>
+  </div>
+  <div class="col l12">
+    <h5><b>keys</b></h5>
+    <p>Returns array of object keys</p>
+    <b>Usage</b>: object | keys
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | keys }} </code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | keys }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>values</b></h5>
+    <p>Returns array of object values</p>
+    <b>Usage</b>: object | values
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | values }} </code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | values }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>pairs</b></h5>
+    <p>Returns array of an object key value pairs</p>
+    <b>Usage</b>: object | pairs
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | pairs }} </code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | pairs }}
+    <p><code ngNonBindable>{{ {foo: [1, 2], bar: [3, 4]} | pairs }}</code></p>
+    <b>Output</b>: {{ {foo: [1, 2], bar: [3, 4]} | pairs }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>pairs</b></h5>
+    <p>Returns object with picked keys from object</p>
+    <b>Usage</b>: object | pick: [key | string]]
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | pick: 'foo' }} </code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | pick: 'foo' }}
+    <p><code ngNonBindable>{{ {foo: [1, 2], bar: [3, 4]} | pairs }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | pick: 'foo': 'bar' }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>omit</b></h5>
+    <p>Returns object after omitting keys from object (opposite of pick)</p>
+    <b>Usage</b>: object | omit: [key | string]
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | omit: 'foo' }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | omit: 'foo': 'bar' }}
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | omit: 'foo': 'bar' }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | omit: 'foo': 'bar' }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>invert</b></h5>
+    <p>Returns object with inverted keys and values. in case of equal values, subsequent values overwrite property assignments
+      of previous values.</p>
+    <b>Usage</b>: object | invert
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | invert }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | invert }}
+    <hr/>
+  </div>
+
+  <div class="col l12">
+    <h5><b>invertBy</b></h5>
+    <p>Returns object with inverted keys and values. in case of equal values, will add to an array.</p>
+    <b>Usage</b>: object | invertBy: [Function | optional]
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | invertBy }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | invertBy }}
+    <p><code ngNonBindable>{{ {foo: 1, bar: 2} | invertBy: cb }}</code></p>
+    <b>Output</b>: {{ {foo: 1, bar: 2} | invertBy: cb }}
+    <p><code ngNonBindable>{{ {a: 1, b: 2, c: 1, d: 2} | invertBy }}</code></p>
+    <b>Output</b>: {{ {a: 1, b: 2, c: 1, d: 2} | invertBy }}
+    <hr/>
+  </div>
+
+</div>
